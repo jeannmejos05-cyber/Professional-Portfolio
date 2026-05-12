@@ -1,8 +1,5 @@
-/**
- * Checks if a string of brackets is valid
- * @param {string} str - input string with only ()[]{}
- * @returns {boolean} true if valid, false otherwise
- */
+const assert = require('node:assert'); 
+
 function isValidParentheses(str) {
     const stack = [];
     const pairs = {
@@ -11,30 +8,42 @@ function isValidParentheses(str) {
         '{': '}'
     };
 
-    // Loop through each character
-    for (let i = 0; i < str.length; i++) {
-        const char = str[i];
-
-        // If it's an opening bracket, push to stack
+    for (let char of str) {
+        
         if (pairs.hasOwnProperty(char)) {
             stack.push(char);
         } 
-        // If it's a closing bracket
+        
         else {
             const lastOpen = stack.pop();
-            // Check if it matches the correct opening bracket
-            if (char !== pairs[lastOpen]) {
+            
+            if (pairs[lastOpen] !== char) {
                 return false;
             }
         }
     }
 
-    // Stack must be empty if all are matched
+    
     return stack.length === 0;
 }
 
-// --- Test Cases ---
-console.log('Test "()":', isValidParentheses("()"));        // true
-console.log('Test "()[]{}":', isValidParentheses("()[]{}")); // true
-console.log('Test "(]":', isValidParentheses("(]"));         // false
-console.log('Test "{[]}":', isValidParentheses("{[]}"));     // true
+
+function runTest(id, input, expected) {
+  try {
+    const result = isValidParentheses(input);
+    assert.strictEqual(result, expected);
+    console.log(Test ${id} Passed: "${input}" => ${expected});
+  } catch (err) {
+    console.error(Test ${id} Failed: "${input}" | Expected ${expected} but got ${!expected});
+  }
+}
+
+console.log("Starting Parentheses Validation Tests...\n");
+
+runTest(1, "()", true);
+runTest(2, "[]", true);
+runTest(3, "{}", true);
+runTest(4, "()[]{}", true);
+runTest(5, "{[()]}", true);
+
+console.log("\nTests Completed.");
