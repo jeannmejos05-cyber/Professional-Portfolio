@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Side Navigation -->
+    <nav id="side-nav">
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero">
+        <div class="hero-content">
+            <h1>Juan Dela Cruz</h1>
+            <p class="title">Frontend Web Developer & UI/UX Enthusiast</p>
+            <a href="#contact" class="cta-btn">Get In Touch</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>Professional Summary</h2>
+        <p>I am a passionate web developer with over 3 years of experience building responsive, user-friendly websites and applications. I specialize in translating design concepts into functional code while ensuring accessibility and performance. My goal is to create digital experiences that are both visually appealing and easy to use for all users. I am always eager to learn new technologies and improve my craft to deliver high-quality solutions.</p>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <h2>Work Experience</h2>
+        
+        <div class="job">
+            <h3>Frontend Developer</h3>
+            <p><strong>TechSolutions PH</strong> | January 2023 – Present</p>
+            <ul>
+                <li>Developed and maintained 12+ client websites using HTML, CSS, and JavaScript</li>
+                <li>Collaborated with designers to implement responsive layouts and interactive features</li>
+                <li>Optimized site performance, reducing load time by 40% on average</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <h3>Junior Web Developer</h3>
+            <p><strong>Digital Creative Studio</strong> | June 2021 – December 2022</p>
+            <ul>
+                <li>Assisted in building e-commerce platforms and corporate sites</li>
+                <li>Fixed cross-browser compatibility issues and improved SEO structure</li>
+                <li>Created reusable UI components for faster development workflow</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <h2>Education</h2>
+        <p><strong>Bachelor of Science in Information Technology</strong></p>
+        <p>Eastern Visayas State University</p>
+        <p>Graduated: March 2021</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2>Technical Skills</h2>
+        <ul class="skills-list">
+            <li>HTML5 & CSS3</li>
+            <li>JavaScript (ES6+)</li>
+            <li>Responsive Web Design</li>
+            <li>React.js Basics</li>
+            <li>Git & Version Control</li>
+            <li>UI/UX Principles</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <form action="#" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Juan Dela Cruz. All rights reserved.</p>
+        <div class="footer-nav">
+            <a href="#hero">Home</a> |
+            <a href="#about">About</a> |
+            <a href="#contact">Contact</a>
+        </div>
+    </footer>
+</body>
+</html>

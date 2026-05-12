@@ -1,0 +1,314 @@
+/* --- CSS Variables: Indigo Theme --- */
+:root {
+    --indigo-50: #eef2ff;
+    --indigo-100: #e0e7ff;
+    --indigo-300: #a5b4fc;
+    --indigo-500: #6366f1; /* Main Indigo */
+    --indigo-600: #4f46e5;
+    --indigo-700: #4338ca;
+    --indigo-800: #3730a3;
+    --indigo-900: #312e81;
+
+    --text-dark: #1e1b4b;
+    --text-light: #64748b;
+    --white: #ffffff;
+    --border-color: #c7d2fe;
+    --shadow: 0 2px 6px rgba(79, 70, 229, 0.12);
+    --radius: 6px;
+}
+
+/* --- Base Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--indigo-50);
+    color: var(--text-dark);
+    line-height: 1.5;
+    font-size: 16px;
+    border: 2px solid var(--border-color);
+    min-height: 100vh;
+}
+
+/* --- Side Navigation --- */
+#side-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 180px;
+    height: 100vh;
+    background-color: var(--indigo-800);
+    padding: 1.2rem 0.8rem;
+    border-right: 3px solid var(--indigo-500);
+    box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+}
+
+#side-nav ul {
+    list-style: none;
+}
+
+#side-nav a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.6rem 0.9rem;
+    margin-bottom: 0.4rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius);
+    transition: all 0.25s ease;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+#side-nav a:hover {
+    background-color: var(--indigo-500);
+    border-color: var(--white);
+    padding-left: 1.2rem;
+}
+
+/* --- Main Layout --- */
+header, 
+section, 
+footer {
+    margin-left: 190px;
+    padding: 1.8rem 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+/* --- Hero Section --- */
+#hero {
+    height: 100vh;
+    background: linear-gradient(135deg, var(--indigo-600), var(--indigo-800));
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid var(--indigo-300);
+    margin: 0.5rem;
+    border-radius: var(--radius);
+}
+
+.hero-content h1 {
+    font-size: 2.4rem;
+    margin-bottom: 0.4rem;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.title {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+}
+
+.cta-btn {
+    background-color: var(--white);
+    color: var(--indigo-700);
+    padding: 0.7rem 1.8rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    font-size: 0.95rem;
+    border: 2px solid transparent;
+}
+
+.cta-btn:hover {
+    background-color: var(--indigo-300);
+    color: var(--white);
+    border-color: var(--white);
+}
+
+/* --- Sections General --- */
+.section {
+    min-height: 100vh;
+    border: 1px solid var(--border-color);
+    margin: 0.3rem;
+    padding: 1.5rem !important;
+    border-radius: var(--radius);
+    background-color: var(--white);
+}
+
+h2 {
+    color: var(--indigo-700);
+    border-bottom: 2px solid var(--indigo-500);
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+
+/* --- Experience & Education --- */
+.job {
+    margin-bottom: 1.2rem;
+    padding: 1rem 1.2rem;
+    background-color: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: 0.2s;
+}
+
+.job:hover {
+    border-color: var(--indigo-500);
+}
+
+.job h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+    color: var(--indigo-800);
+}
+
+.job p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* --- Skills --- */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    list-style: none;
+}
+
+.skills-list li {
+    background-color: var(--indigo-600);
+    color: var(--white);
+    padding: 0.4rem 1rem;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid var(--indigo-300);
+}
+
+/* --- Contact Form --- */
+.contact-form {
+    max-width: 550px;
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 2px solid var(--border-color);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--indigo-800);
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.7rem;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    transition: 0.2s;
+    background-color: var(--indigo-50);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--indigo-500);
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.15);
+}
+
+.submit-btn {
+    background-color: var(--indigo-600);
+    color: var(--white);
+    border: 2px solid transparent;
+    padding: 0.75rem 1.8rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-weight: 500;
+}
+
+.submit-btn:hover {
+    background-color: var(--indigo-800);
+    border-color: var(--indigo-300);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--indigo-800);
+    color: var(--white);
+    text-align: center;
+    padding: 1.2rem;
+    font-size: 0.9rem;
+    border-top: 3px solid var(--indigo-500);
+}
+
+.footer-nav a {
+    color: var(--indigo-300);
+    text-decoration: none;
+    margin: 0 0.4rem;
+    border-bottom: 1px solid transparent;
+}
+
+.footer-nav a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid var(--indigo-300);
+}
+
+/* --- Responsive Design (Mobile Friendly) --- */
+@media (max-width: 768px) {
+    #side-nav {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        border-right: none;
+        border-bottom: 3px solid var(--indigo-500);
+    }
+
+    #side-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.4rem;
+    }
+
+    #side-nav a {
+        margin: 0;
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    header, 
+    section, 
+    footer {
+        margin-left: 0;
+        padding: 1.5rem 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .contact-form {
+        width: 100%;
+        padding: 1.2rem;
+    }
+
+    .skills-list {
+        gap: 0.5rem;
+    }
+}
